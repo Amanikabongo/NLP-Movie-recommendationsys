@@ -1,4 +1,4 @@
-# Movie Recommendation System (NPL-MOVIES)
+# Movie Recommendation System (NLP-MOVIES)
 
 This project builds a movie recommendation system based on word vector similarity using spaCy. It recommends which movie a user might watch next based on the description of a given movie.
 
