@@ -16,7 +16,7 @@ This project builds a movie recommendation system based on word vector similarit
    ```
 2. **Navigate to the Project Directory**:
    ```sh
-    cd path/to/project-directory
+    cd NLP-Movie-recommendationsys
    ```
 ## Install spaCy and the Required Language Model:
    ```sh
