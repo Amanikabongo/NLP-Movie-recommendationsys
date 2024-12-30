@@ -10,7 +10,7 @@ This project builds a movie recommendation system based on word vector similarit
 
 ## Installation
 
-1. **Clone the Repository**: (Assuming you have the project files)
+1. **Clone the Repository**:(to your local machine)
    ```sh
    git clone https://github.com/Amanikabongo/NLP-Movie-recommendationsys.git
    ```
