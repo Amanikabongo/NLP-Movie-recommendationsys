@@ -1,3 +1,4 @@
+import os
 import spacy
 
 # Load spaCy's medium-sized language model
@@ -35,8 +36,7 @@ def recommend_movie(description, movie_descriptions):
     Returns:
     tuple: Index of the most similar movie and the similarity score.
     """
-    if not isinstance(description, str) or not isinstance(movie_descriptions,
-                                                          list):
+    if not isinstance(description, str) or not isinstance(movie_descriptions, list):
         raise ValueError(
             "Invalid input types. 'description' should be a string and 'movie_descriptions' should be a list of strings.")
 
@@ -62,8 +62,8 @@ def recommend_movie(description, movie_descriptions):
     return best_match, max_similarity
 
 
-# Path to the movies.txt file
-file_path = 'C:/Users/amans/Desktop/NLP-Movies/movies.txt'
+# Relative path to the movies.txt file
+file_path = os.path.join(os.path.dirname(__file__), 'movies.txt')
 
 try:
     # Read the movie descriptions from the file
@@ -77,15 +77,14 @@ try:
     )
 
     # Get the recommended movie
-    recommended_movie_idx, similarity_score = recommend_movie(planet_hulk_desc,
-                                                              movie_descriptions)
+    recommended_movie_idx, similarity_score = recommend_movie(planet_hulk_desc, movie_descriptions)
 
     print(f"Recommended movie : {recommended_movie_idx}")
     print(f"Similarity score: {similarity_score:.2f}")
-    print(
-        f"Recommended movie description: {movie_descriptions[recommended_movie_idx]}")
+    print(f"Recommended movie description: {movie_descriptions[recommended_movie_idx]}")
 
 except ValueError as e:
     print(e)
+
 
 
